@@ -16,21 +16,21 @@ Importing the necessary libraries and load the pretrained BERT using SentenceTra
 
 `pythonfrom sentence_transformers import SentenceTransformer
 
-*## Load the pretrained model*
+*### Load the pretrained model*
 sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')`
 
-## **Encode Text Data into Sentence Embeddings**
+### **Encode Text Data into Sentence Embeddings**
 
 Next, encode the meme texts into sentence embedding using the loaded model.
 `df['sent_bert'] = df['text'].apply(lambda x: sbert_model.encode(x))`
 
-## **Visualization with T-SNE**
+### **Visualization with T-SNE**
 
 To visualize the separability of offensive and non-offensive text types. 
 
 ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/47d4eabb-2253-40ae-94cb-d02846dd6d23/35b2f7e7-00ab-497b-9b33-b1c45b3616a3/image.png)
 
-## **Classification Models**
+### **Classification Models**
 
 Various machine learning classifiers are applied to classify the sentence embeddings:
 
@@ -40,7 +40,7 @@ Various machine learning classifiers are applied to classify the sentence embedd
 - **Support Vector Classifier**
 - **Multi-layer Perceptron (MLP)**
 
-## **Training and Evaluation**
+### **Training and Evaluation**
 
 Trained each model using the encoded sentence embedding and evaluated their performance on a test set. Below is an example of training a ML models:
 
@@ -54,13 +54,13 @@ Trained each model using the encoded sentence embedding and evaluated their perf
 
 ## **Document 2 & 3 - Image Classification with VGG16 and ResNet**
 
-## **Overview**
+### **Overview**
 
 This project utilizes fine tuning VGG16 and ResNet architectures for classifying images, using Facebook Offensive and Non-Offensive meme images and their associated labels. 
 
-## **Architectures of VGG16 and ResNet**
+### **Architectures of VGG16 and ResNet**
 
-## **VGG16 Architecture**
+### **VGG16 Architecture**
 
 VGG16 is a convolutional neural network (CNN) architecture known for its simplicity and depth. It consists of the following layers:
 
@@ -73,7 +73,7 @@ VGG16 is a convolutional neural network (CNN) architecture known for its simplic
     - The final layer uses a sigmoid activation function for binary classification.
     
 
-## **ResNet Architecture**
+### **ResNet Architecture**
 
 ResNet (Residual Network) is designed to overcome the vanishing gradient problem in deep networks by using skip connections. Its architecture includes:
 
@@ -84,7 +84,7 @@ ResNet (Residual Network) is designed to overcome the vanishing gradient problem
 - **Fully Connected Layers**:
     - Similar to VGG, the output is flattened and passed through fully connected layers with a final sigmoid activation for binary classification.
 
-## **Training and Evaluation**
+### **Training and Evaluation**
 
 Trained both the model using the prepossessed image data and evaluated their performance on a test set
 
@@ -95,11 +95,11 @@ Trained both the model using the prepossessed image data and evaluated their per
 
 ## **Document 3 - Multimodal Classification with LSTM and CNN**
 
-## **Overview**
+### **Overview**
 
 This project employs a multimodal approach to classify memes as offensive and non offensive. The architecture integrates Long Short Term Memory (LSTM) networks for processing text and Convolutional Neural Networks (CNN) for analyzing images. This allows the model to leverage both modalities for classification.
 
-## **Multimodal Model Architecture**
+### **Multimodal Model Architecture**
 
 The model architecture consists of the following components:
 
@@ -117,18 +117,18 @@ The model architecture consists of the following components:
     - The concatenated output is fed into a couple of Dense layers with ReLU activation functions and Dropout layers set at 30% to prevent overfitting.
     - The final output layer uses a sigmoid activation function for binary classification.
 
-## **Loss Function and Optimization**
+### **Loss Function and Optimization**
 
 - **Loss Function**: Binary Cross Entropy
 - **Optimizer**: Adam optimizer
 
-## **Training Configuration**
+### **Training Configuration**
 
 - **Batch Size**: 100
 - **Epochs**: 20
 - **Early Stopping**: Patience set to 5 epochs without improvement.
 
-## **Results Summary**
+### **Results Summary**
 
 The shallow multimodal classifier demonstrated outstanding performance due to the additive nature of combining text and image outputs. The table below summarizes the performance metrics:
 
