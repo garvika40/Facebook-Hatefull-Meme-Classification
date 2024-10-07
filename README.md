@@ -4,7 +4,7 @@
 
 source - https://www.kaggle.com/datasets/audreyhengruizhang/facebook-hateful-meme-captions 
 
-## Document 1 - Text Classification with BERT Sentence Transformers
+## File 1 - Text Classification with BERT Sentence Transformers
 
 ### **Overview**
 
@@ -52,7 +52,7 @@ Trained each model using the encoded sentence embedding and evaluated their perf
 | Support Vector Classifier | ~81% |
 | Multi-layer Perceptron | ~74% |
 
-## **Document 2 & 3 - Image Classification with VGG16 and ResNet**
+## **File 2 - Image Classification with VGG16 and ResNet**
 
 ### **Overview**
 
@@ -90,10 +90,10 @@ Trained both the model using the prepossessed image data and evaluated their per
 
 | **Model** | **Accuracy** |
 | --- | --- |
-| VGG16 | [Insert] |
-| ResNet | [Insert] |
+| VGG16 | ~50% |
+| ResNet | ~51% |
 
-## **Document 3 - Multimodal Classification with LSTM and CNN**
+## **File 3 - Multimodal Classification with LSTM and CNN**
 
 ### **Overview**
 
