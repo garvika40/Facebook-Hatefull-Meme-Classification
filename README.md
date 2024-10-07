@@ -6,17 +6,17 @@ source - https://www.kaggle.com/datasets/audreyhengruizhang/facebook-hateful-mem
 
 ## Document 1 - Text Classification with BERT Sentence Transformers
 
-## **Overview**
+### **Overview**
 
 This project utilizes BERT Sentence Transformers for classifying meme texts based on offensive and non-offensive. The approach involves encoding the texts into sentence embeddings and then applying various machine learning classifiers to achieve accurate classification results.
 
-## **Pretrained Sentence Transformer For Sentence Embeddings**
+### **Pretrained Sentence Transformer For Sentence Embeddings**
 
 Importing the necessary libraries and load the pretrained BERT using SentenceTransformer.
 
 `pythonfrom sentence_transformers import SentenceTransformer
 
-*# Load the pretrained model*
+*## Load the pretrained model*
 sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')`
 
 ## **Encode Text Data into Sentence Embeddings**
