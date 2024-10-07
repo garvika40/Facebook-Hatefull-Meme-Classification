@@ -1,6 +1,6 @@
 # Multi-Modal Facebook Hateful Meme Classification
 
-## Dataset - Facebook meme data - with offensive and non offensive labels.
+## Dataset - Facebook hateful meme data with offensive and non offensive labels.
 
 source - https://www.kaggle.com/datasets/audreyhengruizhang/facebook-hateful-meme-captions 
 
